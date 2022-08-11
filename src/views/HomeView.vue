@@ -9,6 +9,7 @@
     </div>
     <div class="container">
         <h1 class="text-center mt-5">this is the main page</h1>
+       <router-link  class="text-dark h4" to="/product/info" style=" text-decoration: none;">{{name}} view info page</router-link> 
     </div>
 </div>
 </template>

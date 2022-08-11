@@ -18,6 +18,11 @@ const routes = [
     name: 'panel',
     component: () => import( '../views/panelView.vue'),
    // meta : {requiresAuth : true}
+  },
+  {
+    path : '/product/info',
+    name : 'productInfo',
+    component : () => import ('../views/pruductsInfoView.vue')
   }
 ]
 
