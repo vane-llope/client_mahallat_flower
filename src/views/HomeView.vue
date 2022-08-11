@@ -1,18 +1,41 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+    <!--search box -->
+    <div class="container col-md-6">
+        <div class="form d-flex border">
+            <input type="text" class="form-control form-input text-start" placeholder="...Search anything" />
+            <i class="bx bx-search h1 mt-2 pl-5" style="cursor: pointer"></i>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="text-center mt-5">this is the main page</h1>
+    </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+  name: "HomeView",
+};
 </script>
+
+<style scoped>
+.form {
+  position: relative;
+}
+
+.border {
+  border-radius: 20px;
+}
+
+.form-input {
+  border: none;
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.form-input:focus {
+  box-shadow: none;
+}
+</style>
