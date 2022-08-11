@@ -15,13 +15,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
-
     </div>
-
-
-     
- 
-   
 </template>
 
 <script>
@@ -39,6 +33,7 @@ export default {
    axios.post('http://localhost:3000/auth/login', {email : this.email, password :this.password }, { withCredentials: true }) 
    .then((result) => {
      this.msg = result.data.msg
+      this.$store.commit("LOGGD_IN", true);
    if(result.data.permission)  this.$router.push({ name: 'panel' }) }) 
 
     },

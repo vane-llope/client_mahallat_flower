@@ -2,13 +2,22 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    user : false
+    user : '',
+    data:'',
+    refreshToken:''
   },
   getters: {
+   
   },
   mutations: {
-    test(state,payload){
+   LOGGD_IN(state,payload){
       state.user = payload
+    },
+    SET_DATA(state,payload){
+      state.data = payload
+    },
+    SET_REFRESH_TOKEN(state,payload){
+      state.refreshToken = payload
     }
   },
   actions: {

@@ -15,12 +15,19 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      refreshToken : '',
       protectedData : '',
-      userData:''
     }
   },
  
+  computed: {
+  refreshToken () {
+    return this.$store.state.refreshToken
+  },
+   userData () {
+    return this.$store.state.data
+  },
+  
+},
  methods: {
    getProtectedData(){
      axios.defaults.headers.common['Authorization'] = `Bearer ${this.refreshToken}`
@@ -28,27 +35,6 @@ export default {
       .then( (data) => {this.protectedData = data.data})
    }
  },
-  mounted() {
-    axios.get('http://localhost:3000/auth/refreshToken',{withCredentials: true})
-    .then( (data) => {
-      if(data.data.refreshToken == undefined) {
-        this.$router.push({ name: 'home' })
-        } 
-      else{
-         this.refreshToken = data.data.refreshToken
-         this.userData = data.data.info}
-      }
-   )
-    
-    console.log(this.$store.state.user)
-
-    setInterval( () => { axios.get('http://localhost:3000/auth/refreshToken',{withCredentials: true})
-    .then( (data) => {this.refreshToken = data.data.refreshToken
-    this.userData = data.data.info})}, 19*60*1000);
-
-
-   
-   
-  },
+ 
 }
 </script>
