@@ -9,34 +9,34 @@
     </div>
     <div class="container">
         <h1 class="text-center mt-5">this is the main page</h1>
-       <router-link  class="text-dark h4" to="/product/info" style=" text-decoration: none;">{{name}} view info page</router-link> 
+        <router-link class="text-dark h4" to="/product/info" style=" text-decoration: none;">view info page</router-link>
     </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: "HomeView",
+    name: "HomeView",
 };
 </script>
 
 <style scoped>
 .form {
-  position: relative;
+    position: relative;
 }
 
 .border {
-  border-radius: 20px;
+    border-radius: 20px;
 }
 
 .form-input {
-  border: none;
-  height: 55px;
-  text-indent: 33px;
-  border-radius: 10px;
+    border: none;
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
 }
 
 .form-input:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 </style>

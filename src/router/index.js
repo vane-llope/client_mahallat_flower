@@ -19,6 +19,7 @@ const routes = [
     component: () => import( '../views/panelView.vue'),
    // meta : {requiresAuth : true}
   },
+
   {
     path : '/product/info',
     name : 'productInfo',
